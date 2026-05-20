@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div class="container nav">
+    <strong>{{ section.settings.brand_name }}</strong>
+    <ul>
+      {% for link in section.settings.menu.links %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    { "type": "text", "id": "brand_name", "label": "Brand name", "default": "Weekend Golf Co" },
+    { "type": "link_list", "id": "menu", "label": "Menu" }
+  ]
+}
+{% endschema %}

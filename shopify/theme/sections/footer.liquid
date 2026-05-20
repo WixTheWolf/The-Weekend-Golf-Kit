@@ -1,0 +1,19 @@
+<footer class="site-footer">
+  <div class="container section">
+    <p class="muted">Premium golf essentials for the round before the round.</p>
+    <ul>
+      {% for link in section.settings.menu.links %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    { "type": "link_list", "id": "menu", "label": "Menu" }
+  ]
+}
+{% endschema %}
