@@ -1,0 +1,17 @@
+{
+  "header": [
+    { "title": "Shop", "url": "/collections/all" },
+    { "title": "Kits", "url": "/collections/kits" },
+    { "title": "Accessories", "url": "/collections/all" },
+    { "title": "Journal", "url": "/blogs/journal" },
+    { "title": "About", "url": "/pages/about" }
+  ],
+  "footer": [
+    { "title": "Contact", "url": "/pages/contact" },
+    { "title": "Shipping", "url": "/pages/shipping" },
+    { "title": "Returns", "url": "/pages/returns" },
+    { "title": "Privacy", "url": "/policies/privacy-policy" },
+    { "title": "Terms", "url": "/policies/terms-of-service" },
+    { "title": "Wholesale / Events", "url": "/pages/wholesale-events" }
+  ]
+}
