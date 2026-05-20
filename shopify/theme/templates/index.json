@@ -1,0 +1,8 @@
+{
+  "sections": {
+    "hero": { "type": "home-hero", "settings": {"primary_url": "/products/weekend-golf-kit", "secondary_url": "/collections/all"} },
+    "featured": { "type": "home-featured-product", "settings": {"title": "The Weekend Golf Kit"} },
+    "use_cases": { "type": "home-use-cases", "settings": {} }
+  },
+  "order": ["hero", "featured", "use_cases"]
+}

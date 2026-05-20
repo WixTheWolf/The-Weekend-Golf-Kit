@@ -1,0 +1,18 @@
+<section class="section">
+  <div class="container">
+    <h1>{{ collection.title }}</h1>
+    <div class="grid grid-3">
+      {% for product in collection.products %}
+        <article class="card">
+          <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
+          <p>{{ product.price | money }}</p>
+        </article>
+      {% else %}
+        <p class="muted">No products found.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{ "name": "Main collection", "settings": [] }
+{% endschema %}

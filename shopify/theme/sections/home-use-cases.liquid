@@ -1,0 +1,20 @@
+<section class="section">
+  <div class="container">
+    <h2>Shop by Use Case</h2>
+    <div class="grid grid-3">
+      {% for block in section.blocks %}
+        <article class="card"><h3>{{ block.settings.title }}</h3><a href="{{ block.settings.url }}">Shop</a></article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Use cases",
+  "blocks": [
+    {"type":"use_case","name":"Use case","settings":[{"type":"text","id":"title","label":"Title"},{"type":"url","id":"url","label":"URL"}]}
+  ],
+  "max_blocks": 8,
+  "presets": [{"name":"Use cases","blocks":[{"type":"use_case","settings":{"title":"Golf Trips"}},{"type":"use_case","settings":{"title":"Tournament Gifts"}},{"type":"use_case","settings":{"title":"Early Tee Times"}},{"type":"use_case","settings":{"title":"Weekend Rounds"}},{"type":"use_case","settings":{"title":"Gifts Under $100"}}]}]
+}
+{% endschema %}

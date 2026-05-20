@@ -1,0 +1,19 @@
+<section class="section">
+  <div class="container">
+    <h1>Cart</h1>
+    {% if cart.item_count > 0 %}
+      <ul>
+        {% for item in cart.items %}
+          <li>{{ item.product.title }} × {{ item.quantity }} — {{ item.final_line_price | money }}</li>
+        {% endfor %}
+      </ul>
+      <p><strong>Total: {{ cart.total_price | money }}</strong></p>
+      <a class="btn" href="/checkout">Checkout</a>
+    {% else %}
+      <p class="muted">Your cart is empty.</p>
+    {% endif %}
+  </div>
+</section>
+{% schema %}
+{ "name": "Main cart", "settings": [] }
+{% endschema %}
