@@ -1,0 +1,22 @@
+<section class="section">
+  <div class="container card">
+    <h2>{{ section.settings.title }}</h2>
+    {% if section.settings.product != blank %}
+      <h3>{{ section.settings.product.title }}</h3>
+      <p>{{ section.settings.product.description | strip_html | truncate: 180 }}</p>
+      <a class="btn" href="{{ section.settings.product.url }}">View product</a>
+    {% else %}
+      <p>Add The Weekend Golf Kit as the featured product in theme customizer.</p>
+    {% endif %}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Featured product block",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Section title", "default": "Featured Product" },
+    { "type": "product", "id": "product", "label": "Product" }
+  ],
+  "presets": [{"name": "Featured product block"}]
+}
+{% endschema %}

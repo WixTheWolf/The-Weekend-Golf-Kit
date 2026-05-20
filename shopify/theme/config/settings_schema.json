@@ -1,0 +1,8 @@
+[
+  {
+    "name": "Theme settings",
+    "settings": [
+      {"type":"text","id":"brand_tagline","label":"Brand tagline","default":"Premium golf essentials for the round before the round."}
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+<section class="section">
+  <div class="container">
+    <h1>{{ product.title }}</h1>
+    <div class="card">
+      {{ product.description }}
+      <p><strong>{{ product.price | money }}</strong></p>
+      {% form 'product', product %}
+        {% if product.variants.size > 1 %}
+          <select name="id">
+            {% for variant in product.variants %}
+              <option value="{{ variant.id }}">{{ variant.title }}</option>
+            {% endfor %}
+          </select>
+        {% else %}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        {% endif %}
+        <button type="submit" class="btn">Add to cart</button>
+      {% endform %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{ "name": "Main product", "settings": [] }
+{% endschema %}
