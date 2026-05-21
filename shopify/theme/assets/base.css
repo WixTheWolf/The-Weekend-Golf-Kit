@@ -19,3 +19,11 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sa
 .card { background: var(--card); border-radius: 8px; padding: 1rem; border: 1px solid #ececec; }
 .section { padding: 2.5rem 0; }
 .muted { color: var(--muted); }
+.hero-grid { display:grid; gap:2rem; align-items:center; grid-template-columns: 1fr; }
+.hero-actions { display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1rem; }
+.hero-media { width:100%; }
+.hero-image { width:100%; height:auto; display:block; border-radius:12px; border:1px solid #ececec; }
+.hero-image-placeholder { min-height:260px; display:flex; align-items:center; justify-content:center; text-align:center; }
+@media (min-width: 990px) {
+  .hero-grid { grid-template-columns: 1fr 1fr; }
+}
